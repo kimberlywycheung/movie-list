@@ -1,3 +1,114 @@
 body {
   font-family: sans-serif, arial;
 }
+
+form {
+  padding: 5px;
+}
+
+img {
+  height: 100px;
+  float: right;
+}
+
+#top-bar {
+  border-style: solid;
+  border-width: 0px;
+  padding-left: 5px;
+  overflow: auto;
+  position: absolute;
+}
+
+#top-bar::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#toggle {
+  float: bottom;
+  padding-left: 5px;
+}
+
+.view {
+  background-color: white;
+  padding: 18px;
+}
+
+.search {
+  float: right;
+  padding-top: 1px;
+  padding-bottom: 5px;
+}
+
+.category {
+  padding: 5px;
+  float: right;
+}
+
+.movie-list {
+  padding: 5px;
+  padding-top: 0px;
+}
+
+.movie-entry {
+  border-style: solid;
+  border-color:#757674;
+  border-width: 0.5px;
+  border-radius: 2px;
+  padding: 5px;
+  overflow: auto;
+}
+
+.movie-title {
+  position: relative;
+  margin-left: 30px;
+  float: left;
+}
+
+.movie-info {
+  border-style: solid;
+  border-color:#757674;
+  border-width: 0.5px;
+  border-radius: 2px;
+  padding: 5px;
+  overflow: auto;
+  position: bottom;
+}
+
+input, button {
+  padding: 6px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+}
+
+#add {
+  margin-bottom: 20px;
+}
+
+#add-bar-submit {
+  background-color: #6ba64c;
+  color: white;
+  border-width: 0px;
+}
+
+#search-bar-submit {
+  background-color: white;
+  box-shadow: none;
+  padding: 5px;
+}
+
+#category {
+  background-color: #6ba64c;
+  border-width: 0px;
+  border-radius: 5px;
+  height: 8%;
+  color: white;
+  float: right;
+  position: relative;
+}
+
+[tag="selected"] {
+  background-color: #6ba64c;
+}
