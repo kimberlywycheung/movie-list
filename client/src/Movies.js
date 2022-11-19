@@ -2,7 +2,7 @@ class Movie {
   constructor(title) {
     this.title = title;
     this.default = true;
-    this.category = 'Watched';
+    this.watched = true;
     this.info = {
       Year: '1995',
       Runtime: '107 min',
@@ -16,7 +16,7 @@ let movielist = [
   {
     title: 'Mean Girls',
     default: true,
-    category: 'Watched',
+    watched: true,
     info: {
       year: '1995',
       runtime: '107 min',
@@ -26,7 +26,7 @@ let movielist = [
   }, {
     title: 'Hackers',
     default: true,
-    category: 'Watched',
+    watched: true,
     info: {
       year: '1995',
       runtime: '107 min',
@@ -36,7 +36,7 @@ let movielist = [
   }, {
     title: 'The Grey',
     default: true,
-    category: 'Watched',
+    watched: true,
     info: {
       year: '1995',
       runtime: '107 min',
@@ -47,7 +47,7 @@ let movielist = [
   {
     title: 'Sunshine',
     default: true,
-    category: 'Watched',
+    watched: true,
     info: {
       year: '1995',
       runtime: '107 min',
@@ -57,7 +57,7 @@ let movielist = [
   }, {
     title: 'Ex Machina',
     default: true,
-    category: 'Watched',
+    watched: true,
     info: {
       year: '1995',
       runtime: '107 min',

@@ -1,23 +1,26 @@
 import React from 'react';
 
 const Add = (props) => {
-
   let moviesArray = props.movies.slice();
 
-  const handleChange = () => {};
+  let newTitle = '';
+
+  const handleChange = (event) => {
+    newTitle = event.target.value;
+  };
 
   const handleSubmit = () => {
     event.preventDefault();
 
-    const input = document.querySelector('input').value;
     let foundDuplicate = false;
 
     for (let i = 0; i < moviesArray.length; i++) {
-      if (moviesArray[i].title.toLowerCase() === input.toLowerCase()) {
+      if (moviesArray[i].title.toLowerCase() === newTitle.toLowerCase()) {
         foundDuplicate = true;
 
+        // can delete when updated with own database
         moviesArray[i].default = false;
-        moviesArray[i].category = props.currentView;
+        moviesArray[i].watched = props.watchedView;
       }
     }
 
@@ -25,7 +28,7 @@ const Add = (props) => {
       const movieObj = {
         title: input,
         default: false,
-        category: props.currentView,
+        watched: props.watchedView,
         info: {
           year: '1995',
           runtime: '107 min',

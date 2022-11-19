@@ -21,11 +21,15 @@ const MovieList = (props) => {
     );
   }
 
+  const updateMovies = () => {
+    props.handleMovieListToggle(props.movies);
+  }
+
   return (
     <div className='movie-list'>
       {movieList.map((movie) => {
-        if (movie.category === props.currentView) {
-          return <MovieListEntry key={movie.title} movie={movie}/>;
+        if (movie.watched === props.watchedView) {
+          return <MovieListEntry key={movie.title} movie={movie} updateMovies={updateMovies}/>;
         }
       })}
     </div>

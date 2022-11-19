@@ -1,5 +1,7 @@
 body {
   font-family: sans-serif, arial;
+  position: center;
+  width: 50%;
 }
 
 form {
@@ -107,6 +109,7 @@ input, button {
   color: white;
   float: right;
   position: relative;
+  font-weight: bold;
 }
 
 [tag="selected"] {

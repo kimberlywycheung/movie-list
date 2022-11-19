@@ -3,31 +3,23 @@ import React from 'react';
 const View = (props) => {
 
   const handleWatch = () => {
-    if (props.currentView !== "Watched") {
-      props.setCurrentView("Watched");
-    }
-  };
-
-  const handleToWatch = () => {
-    if (props.currentView !== "To Watch") {
-      props.setCurrentView("To Watch");
-    }
+    props.setWatchedView(!props.watchedView);
   };
 
   return (
-      <div id="toggle">
+      <div className="toggle">
         <button
           className="view"
           id="Watched"
-          tag={props.currentView === "Watched" ? "selected" : ""}
+          tag={props.watchedView ? "selected" : ""}
           onClick={handleWatch}>
           Watched
         </button>
         <button
           className="view"
           id="To Watch"
-          tag={props.currentView === "To Watch" ? "selected" : ""}
-          onClick={handleToWatch}>
+          tag={props.currentView ? "selected" : ""}
+          onClick={handleWatch}>
           To Watch
         </button>
       </div>
